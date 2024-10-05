@@ -82,6 +82,6 @@ PRIMITIVE_CONSTANTS = {
         "THREE_BY_THREE",
     ],
 }
-PRIMITIVE_FUNCTIONS = find_function_names(
-    filename=os.path.join(PROJECT_FOLDER_PATH, "codeit/dsl/dsl.py")
-)
+# PRIMITIVE_FUNCTIONS = find_function_names(
+#     filename=os.path.join(PROJECT_FOLDER_PATH, "codeit/dsl/dsl.py")
+# )
