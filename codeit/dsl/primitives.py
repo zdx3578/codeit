@@ -4,7 +4,7 @@
 import os
 import re
 
-from codeit import PROJECT_FOLDER_PATH
+# from codeit import PROJECT_FOLDER_PATH
 
 
 def find_function_names(filename):
