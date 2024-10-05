@@ -760,7 +760,7 @@ def objects(
     without_bg: Boolean
 ) -> Objects:
     """ objects occurring on the grid """
-    bg = mostcolor(grid) if without_bg else None
+    bg = 0 if without_bg else None
     objs = set()
     occupied = set()
     h, w = len(grid), len(grid[0])
