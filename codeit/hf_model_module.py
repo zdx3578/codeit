@@ -11,7 +11,7 @@ from transformers import T5Config
 
 from codeit.typing_custom import TensorType
 from codeit.utils import get_class, get_tokenizer
-
+import time
 
 def get_model(cls, name, cache_dir):
     model_class = get_class(cls)
@@ -23,12 +23,17 @@ class HFModule(pl.LightningModule):
         super().__init__()
         self.transformer = None
         self.cls = config.model.cls
+        print()
+        print()
+        # 打印当前时间，格式为：年-月-日 时:分:秒
+        print(time.strftime("%Y-%m-%d %H:%M:%S"))
         if not os.path.isdir(config.model.resume_path):
             print(f"***{config.model.resume_path} does not exist so initialising base model ***")
             self.name = config.model.name
         else:
             print("*** model resuming from checkpoint ***")
             self.name = config.model.resume_path
+        print()
         self.cache_dir = config.model.cache_dir
         self.reduce_size = config.model.reduce_size
         self.config = config

@@ -192,6 +192,9 @@ def main(config: Any) -> None:
         if config.profile:
             profiler = cProfile.Profile()
             profiler.enable()
+            
+        print()
+        print()
 
         print(f"******** iteration {n_iter} *****{config.exit.n_iters}***")
 
