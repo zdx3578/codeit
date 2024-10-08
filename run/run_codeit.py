@@ -195,7 +195,7 @@ def main(config: Any) -> None:
             
         print()
         print()
-
+        print(time.strftime("%Y-%m-%d %H:%M:%S"))
         print(f"******** iteration {n_iter} *****{config.exit.n_iters}***")
 
         # add mutated tasks to buffer
