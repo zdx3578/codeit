@@ -187,12 +187,13 @@ def main(config: Any) -> None:
     )
 
     for n_iter in range(0, config.exit.n_iters):
+        
 
         if config.profile:
             profiler = cProfile.Profile()
             profiler.enable()
 
-        print(f"******** iteration {n_iter} ********")
+        print(f"******** iteration {n_iter} *****{config.exit.n_iters}***")
 
         # add mutated tasks to buffer
         if config.ablation.used:

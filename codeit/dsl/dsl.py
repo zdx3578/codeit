@@ -1046,7 +1046,8 @@ def underfill(
 ) -> Grid:
     """ fill value at indices that are background """
     h, w = len(grid), len(grid[0])
-    bg = mostcolor(grid)
+    # bg = mostcolor(grid)
+    bg = 0
     g = list(list(r) for r in grid)
     for i, j in toindices(patch):
         if 0 <= i < h and 0 <= j < w:
@@ -1061,7 +1062,8 @@ def underpaint(
 ) -> Grid:
     """ paint object to grid where there is background """
     h, w = len(grid), len(grid[0])
-    bg = mostcolor(grid)
+    # bg = mostcolor(grid)
+    bg = 0
     g = list(list(r) for r in grid)
     for value, (i, j) in obj:
         if 0 <= i < h and 0 <= j < w:

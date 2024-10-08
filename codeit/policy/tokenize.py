@@ -14,10 +14,13 @@ def sparse_grid_text_encoder(grid):
     colour_indices = {}
     try:
         background_colour = mostcolor(grid)
+        # # print(background_colour)
+        # background_colour = 0
     except:
         if all(not x for x in grid):
             return "empty"
     colours = set(palette(grid))
+    
     colours.remove(background_colour)
     for colour in colours:
         indices = set(ofcolor(grid, colour))
@@ -172,5 +175,20 @@ def grid_to_colored_text(grid):
         7: "magenta",
         8: "brown",
         9: "black",
+    }
+    return "\n".join("".join(color_map[num] for num in row) for row in grid)
+
+def grid_to_colored_text_reverse(grid):
+    color_map = {
+        "red": 0,
+        "green": 1,
+        "blue": 2,
+        "yellow": 3,
+        "orange": 4,
+        "purple": 5,
+        "cyan": 6,
+        "magenta": 7,
+        "brown": 8,
+        "black": 9,
     }
     return "\n".join("".join(color_map[num] for num in row) for row in grid)
