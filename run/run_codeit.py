@@ -133,7 +133,8 @@ def main(config: Any) -> None:
     pl_module = HFModule(config)
     checkpoint_callback = HfModelCheckpoint(
         dirpath=f"{config.model.models_dir}/",
-        save_top_k=0,
+        save_top_k=3 ,
+        monitor='val_loss', 
         save_last=config.model.save_last,
         config=config,
     )
