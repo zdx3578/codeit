@@ -10,13 +10,13 @@ concept_arc: False
 combined_concept_and_eval: False
 
 baseline:
-  n_samples: 1_000_000
+  n_samples: 2_000_000
   save_chunk_size: 9_600
   log_chunk_size: 9_600
   validation_set: False
   test_set: True
   parallel: False
-  max_save_chunk: 1_000_000
+  max_save_chunk: 2_000_000
   save_search_tasks: True
   save_train_tasks: False
   calculate_performance: True
@@ -37,7 +37,7 @@ ablation:
   tasks_file: "outputs/evaluate_mutations/mutated_tasks_search"
   mutation_interval: 9_600
   start_value: 38_400
-  final_value: 979_200
+  final_value: 1979_200
   sampling_and_filtering: False
 
 replay_buffer: 
@@ -51,7 +51,7 @@ replay_buffer:
   age_normalizer: 100
   num_policy_experiences: 90_000
   num_mutated_experiences: 10_000
-  mutated_train_tasks_file: './data/mutated_tasks_train_'
+  mutated_train_tasks_file: './outputs/mutation/mutated_tasks_train_'
   max_mutated_train_tasks: 19_200
   mutated_file_start: 9_600
   mutated_file_end: 19_200
@@ -141,7 +141,7 @@ optimization:
 
 evaluation:
   temperature: 0.95
-  max_length: 512
+  max_length: 100
   batch_size_sample: 1
   mini_batch_size_sample: 1
   valid_grid_function: 'slow'
