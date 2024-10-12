@@ -61,7 +61,7 @@ replay_buffer:
 exit:
   solutions_interval: 1
   sig_alarm: 0.5 # time allowed before execution times out
-  n_iters: 109 # number of meta-iterations
+  n_iters: 102 # number of meta-iterations
   policy_sample_log: ${hydra:run.dir}
   solutions_dir: ${hydra:run.dir}
   add_policy_samples: True # whether to add policy samples to replay buffer - set False for baselines
