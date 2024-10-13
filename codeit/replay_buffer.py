@@ -119,6 +119,10 @@ class Buffer:
             task.parent_key = task.task_key
             task.extra_info["demonstration_performance"] = 1.0
             self.add(task=task, iteration_id=0, mode="mutated")
+        print
+        print
+        print
+        
         print(f"added {len(train_tasks)} train tasks")
         for task in list(mutated_train_tasks.values())[: self.max_mutated_train_tasks]:
             task["extra_info"]["likelihood"] = 0.0
